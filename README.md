@@ -27,3 +27,23 @@ A CRS defines how the two-dimensional, projected map in your computer relates to
 * pandas is used for standard data manipulation.
 * geopandas extends pandas with spatial operations, geometry types, and spatial joins.
 
+## Steps
+
+### Load Point Locations: power_locations
+We define a sample dataset of five power-related locations (e.g., hydrogen, electric, LNG) across the Netherlands with lat/lon coordinates.
+
+### Intersecting with WDPA: Do These Facilities Touch Protected Areas?
+To identify which power_locations intersect protected zones:
+
+We reproject both power_locations and WDPA to EPSG:3857.
+
+Perform a spatial join using .sjoin(..., predicate='intersects').
+
+Separate intersecting from non-intersecting points.
+
+Visualize using .explore() with color coding:
+
+🔴 Red = intersects protected area
+🟣 Purple = does not intersect
+
+This step gives actionable insight into which energy facilities are located near sensitive conservation zones.
