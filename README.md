@@ -1,4 +1,4 @@
-# 🐸 wdpa-buffer-intersection
+# 🐸 wdpa-intersection
 This project examines whether certain locations are situated within 10 km of any globally protected area, utilizing the World Database on Protected Areas (WDPA). This is especially useful for evaluating environmental risks and opportunities related to conservation policies, sustainable development, or impact assessments.
 
 We'll explore spatial relationships between point locations (e.g., power stations or fuel facilities) and protected areas, leveraging Python, GeoPandas, and geospatial data science practices.
